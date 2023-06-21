@@ -10,7 +10,8 @@
 <body>
     <div class="w-screen min-h-screen flex flex-col">
         <app-navbar></app-navbar>
-        <div *ngIf="showShit()" class="w-screen h-screen absolute top-0 left-0 flex justify-end z-10 bg-app-blue/30">
+        <div *ngIf="activeGif?.title === 'GIF 1'"
+            class="w-screen h-screen absolute top-0 left-0 flex justify-end z-10 bg-app-blue/30">
             <div class="w-3/12 flex flex-col bg-app-blue px-6 py-8">
                 <span class="text-white font-bold text-xl mb-4 text-center">{{activeGif?.title}}</span>
                 <img src="{{activeGif?.image}}" class="w-96 rounded my-6" alt="">
