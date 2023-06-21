@@ -1,11 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProductComponent } from './product/product.component';
+import { GifsComponent } from './pages/gifs/gifs.component';
+import { LoginComponent } from './pages/login/login.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 const routes: Routes = [
   {
-    path: "", component: ProductComponent
+    path: "", component: GifsComponent,
+  },
+  {
+    path: "auth/login", component: LoginComponent,
+  },
+  {
+    path: "**", component: NotFoundComponent,
   }
+
 ];
 
 @NgModule({
